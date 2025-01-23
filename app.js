@@ -4,18 +4,6 @@
 // Declarar un array para almacenar los nombres de los amigos
 let amigos = [];
 
-// Función para actualizar la lista de amigos
-function actualizarListaAmigos() {
-    const lista = document.getElementById('listaAmigos');
-    lista.innerHTML = ""; // Limpiar la lista existente
-    // Iterar sobre el arreglo de amigos y crear elementos de lista
-    for (let i = 0; i < amigos.length; i++) {
-        const li = document.createElement('li');
-        li.textContent = amigos[i];
-        lista.appendChild(li);
-    }
-}
-
 // Función para agregar amigos
 function agregarAmigo() {
     // Capturar el valor del campo de entrada
@@ -28,10 +16,30 @@ function agregarAmigo() {
     }
     // Actualizar el array de amigos
     amigos.push(nombre);
-    // Limpiar el campo de entrada
+    // Limpiar el campo de entrada y enfocarlo
     input.value = "";
+    input.focus();
     // Actualizar la lista de amigos en la página
     actualizarListaAmigos();
+}
+
+// Añadir un event listener al campo de entrada para detectar la tecla Enter
+document.getElementById('amigo').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        agregarAmigo();
+    }
+});
+
+// Función para actualizar la lista de amigos
+function actualizarListaAmigos() {
+    const lista = document.getElementById('listaAmigos');
+    lista.innerHTML = ""; // Limpiar la lista existente
+    // Iterar sobre el arreglo de amigos y crear elementos de lista
+    for (let i = 0; i < amigos.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = amigos[i];
+        lista.appendChild(li);
+    }
 }
 
 // Función para sortear los amigos
