@@ -53,7 +53,10 @@ function sortearAmigo() {
     const indiceAleatorio = Math.floor(Math.random() * amigos.length);
     // Obtener el nombre sorteado
     const amigoSorteado = amigos[indiceAleatorio];
-    // Mostrar el resultado
+    // Mostrar el resultado con el mensaje deseado
     const resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<li>${amigoSorteado}</li>`;
+    resultado.innerHTML = `<li>El amigo secreto sorteado es: ${amigoSorteado}</li>`;
+    // Limpiar la lista de amigos para que no se muestre
+    const lista = document.getElementById('listaAmigos');
+    lista.innerHTML = "";
 }
