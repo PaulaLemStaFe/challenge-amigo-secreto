@@ -35,8 +35,8 @@ Este proyecto utiliza únicamente HTML, CSS y JavaScript nativo. No necesita bib
 ## Tecnologías Utilizadas 💻
 
 - **HTML5:** Para la estructura de la página.
-- **CSS3:3:** Para los estilos y diseño visual.
-- **JavaScript:t:** Para la lógica de gestión de la lista de amigos y el sorteo.
+- **CSS3:** Para los estilos y diseño visual.
+- **JavaScript:** Para la lógica de gestión de la lista de amigos y el sorteo.
 
 ## Contribuciones 🤝
 ¡Contribuye al proyecto! Haz un fork del repositorio, realiza tus cambios y envía un pull request.
